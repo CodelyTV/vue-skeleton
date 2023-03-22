@@ -1,20 +1,42 @@
 {
-  "name": "breaking-bad-vue",
+  "name": "@antoniogiroz/vue-skeleton",
+  "type": "module",
   "version": "0.1.0",
   "private": true,
+  "author": "Antonio Giroz",
+  "license": "MIT",
+  "homepage": "https://github.com/antoniogiroz/vue-skeleton",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/antoniogiroz/vue-skeleton"
+  },
+  "keywords": [
+    "vue",
+    "loading",
+    "skeleton",
+    "progress",
+    "spinner"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js"
+    }
+  },
+  "types": "./dist/index.d.ts",
   "scripts": {
-    "dev": "vite",
     "build": "run-p type-check build-only",
-    "preview": "vite preview",
-    "test:unit": "vitest --environment jsdom --root src/",
+    "test:unit": "vitest",
     "build-only": "vite build",
     "type-check": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false",
     "lint": "eslint . --fix"
   },
+  "peerDependencies": {
+    "vue": ">=3.x.x"
+  },
   "dependencies": {
-    "pinia": "^2.0.30",
-    "vue": "^3.2.47",
-    "vue-router": "^4.1.6"
+    "vue": "^3.2.47"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.35.2",
@@ -30,6 +52,8 @@
     "postcss-preset-env": "^8.0.1",
     "typescript": "~4.9.5",
     "vite": "^4.1.2",
+    "vite-plugin-css-injected-by-js": "^3.0.1",
+    "vite-plugin-dts": "^2.0.2",
     "vitest": "^0.28.5",
     "vue-tsc": "^1.1.3"
   }

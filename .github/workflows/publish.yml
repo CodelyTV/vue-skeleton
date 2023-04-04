@@ -1,15 +1,12 @@
-name: CI
+name: Publish
 
 on:
   push:
     branches:
-      - '**'
-  pull_request:
-    branches:
       - main
 
 jobs:
-  build:
+  publish:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -29,11 +26,10 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Lint
-        run: pnpm lint
-
-      - name: Build
-        run: pnpm build
-
       - name: Tests
         run: pnpm test:unit
+
+      - name: Publish
+        uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_TOKEN }}

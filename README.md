@@ -1,4 +1,6 @@
-# template-vite-vue-ts
+# Vue Skeleton
+
+[![CI](https://github.com/antoniogiroz/vue-skeleton/actions/workflows/ci.yml/badge.svg)](https://github.com/antoniogiroz/vue-skeleton/actions/workflows/ci.yml)
 
 This template should help get you started developing with Vue 3 in Vite.
 

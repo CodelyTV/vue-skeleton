@@ -15,13 +15,13 @@ export function useSkeleton(props: SkeletonProps): {
 
   const definedProps = computed(() => {
     return Object.fromEntries(
-      Object.entries(props).filter(([, value]) => value !== undefined),
+      Object.entries(props).filter(([key, value]) => value !== undefined && key !== 'style'),
     )
   })
 
   const style = computed(() => {
-    const styles = { ...props.style }
-    const allProps = { ...themeProps.value, ...definedProps.value }
+    const allProps = { ...props.style, ...themeProps.value, ...definedProps.value }
+    const styles: CSSProperties = { }
 
     if (allProps.baseColor)
       styles['--base-color'] = allProps.baseColor
@@ -35,8 +35,8 @@ export function useSkeleton(props: SkeletonProps): {
     if (allProps.height)
       styles.height = parseVal(allProps.height)
 
-    if (allProps.radius)
-      styles['border-radius'] = parseVal(allProps.radius)
+    if (allProps.borderRadius)
+      styles.borderRadius = parseVal(allProps.borderRadius)
 
     if (allProps.duration)
       styles['--animation-duration'] = parseVal(allProps.duration, 's')
@@ -48,7 +48,7 @@ export function useSkeleton(props: SkeletonProps): {
       styles['--pseudo-element-display'] = 'none'
 
     if (allProps.circle) {
-      styles['border-radius'] = '50%'
+      styles.borderRadius = '50%'
       styles.height = allProps.height ? parseVal(allProps.height) : parseVal(allProps.width)
     }
 

@@ -15,7 +15,7 @@ export const skeletonProps = {
   height: {
     type: [String, Number],
   },
-  radius: {
+  borderRadius: {
     type: [String, Number],
   },
   circle: {
@@ -62,7 +62,7 @@ export const skeletonThemeProps = {
   height: {
     type: [String, Number],
   },
-  radius: {
+  borderRadius: {
     type: [String, Number],
   },
   inline: {

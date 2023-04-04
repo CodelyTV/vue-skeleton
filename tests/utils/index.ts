@@ -1,4 +1,4 @@
-export const skeletonSelector = 'span.skeleton'
+export const skeletonSelector = 'span.vue-skeleton'
 
 export function getAllSkeletons(): HTMLElement[] {
   return Array.from(document.querySelectorAll<HTMLElement>(skeletonSelector))

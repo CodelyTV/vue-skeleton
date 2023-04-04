@@ -46,8 +46,8 @@ For example:
 import { Skeleton } from '@antoniogiroz/vue-skeleton'
 
 const props = defineProps<{
-  title?: string
-  body?: string
+  title?: string;
+  body?: string;
 }>()
 </script>
 

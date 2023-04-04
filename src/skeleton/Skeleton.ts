@@ -1,6 +1,6 @@
-import type { CSSProperties, ExtractPropTypes, PropType } from 'vue'
+import type { CSSProperties, ExtractPropTypes, PropType } from 'vue';
 
-export const SkeletonThemePropsKey = Symbol('skeletonThemeProps')
+export const SkeletonThemePropsKey = Symbol('skeletonThemeProps');
 
 export const skeletonProps = {
   baseColor: {
@@ -47,7 +47,7 @@ export const skeletonProps = {
     type: Number,
     default: 1,
   },
-}
+};
 
 export const skeletonThemeProps = {
   baseColor: {
@@ -80,7 +80,7 @@ export const skeletonThemeProps = {
     type: Boolean,
     default: false,
   },
-}
+};
 
-export type SkeletonProps = ExtractPropTypes<typeof skeletonProps>
-export type SkeletonThemeProps = ExtractPropTypes<typeof skeletonThemeProps>
+export type SkeletonProps = ExtractPropTypes<typeof skeletonProps>;
+export type SkeletonThemeProps = ExtractPropTypes<typeof skeletonThemeProps>;

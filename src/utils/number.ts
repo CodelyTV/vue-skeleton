@@ -1,18 +1,21 @@
 function isNumeric(value: string | number): value is number {
-  return !isNaN(+value) && isFinite(+value)
+  return !isNaN(+value) && isFinite(+value);
 }
 
 export function parseVal(value: string | number | undefined, defaultUnit = 'px'): string | undefined {
-  if (typeof value === 'undefined')
-    return undefined
+  if (typeof value === 'undefined') {
+    return undefined;
+  }
 
-  if (isNumeric(value))
-    return value + defaultUnit
+  if (isNumeric(value)) {
+    return value + defaultUnit;
+  }
 
-  const res = String(value).match(/(-?[\d.]+)([a-z%]*)/)
+  const res = String(value).match(/(-?[\d.]+)([a-z%]*)/);
 
-  if (!res)
-    return undefined
+  if (!res) {
+    return undefined;
+  }
 
-  return parseFloat(res[1]) + res[2]
+  return parseFloat(res[1]) + res[2];
 }

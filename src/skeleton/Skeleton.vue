@@ -1,18 +1,16 @@
 <script setup lang="ts">
-import { useSkeleton } from './use-skeleton'
-import { skeletonProps } from './Skeleton'
+import { skeletonProps } from './Skeleton';
+import { useSkeleton } from './use-skeleton';
 
-const props = defineProps(skeletonProps)
+const props = defineProps(skeletonProps);
 
-const { elements, className } = useSkeleton(props)
+const { elements, className } = useSkeleton(props);
 </script>
 
 <template>
-  <template v-for="element, index in elements" :key="index">
-    <span class="vue-skeleton" :class="className" :style="element.style">
-      &zwnj;
-    </span>
-    <br v-if="!props.inline">
+  <template v-for="(element, index) in elements" :key="index">
+    <span class="vue-skeleton" :class="className" :style="element.style"> &zwnj; </span>
+    <br v-if="!props.inline" />
   </template>
 </template>
 
@@ -45,12 +43,7 @@ const { elements, className } = useSkeleton(props)
   right: 0;
   height: 100%;
   background-repeat: no-repeat;
-  background-image: linear-gradient(
-      90deg,
-      var(--base-color),
-      var(--highlight-color),
-      var(--base-color)
-  );
+  background-image: linear-gradient(90deg, var(--base-color), var(--highlight-color), var(--base-color));
   transform: translateX(-100%);
 
   animation-name: skeleton;
@@ -62,7 +55,7 @@ const { elements, className } = useSkeleton(props)
 
 @keyframes skeleton {
   100% {
-      transform: translateX(100%);
+    transform: translateX(100%);
   }
 }
 </style>

@@ -2,13 +2,17 @@
   "name": "@antoniogiroz/vue-skeleton",
   "type": "module",
   "version": "0.1.0",
-  "private": true,
-  "author": "Antonio Giroz",
+  "description": "A Vue 3 component to create loading skeletons quickly",
+  "author": "Antonio Giroz <antonioluisgil@gmail.com> (https://antoniogiroz.com)",
   "license": "MIT",
   "homepage": "https://github.com/antoniogiroz/vue-skeleton",
   "repository": {
     "type": "git",
     "url": "https://github.com/antoniogiroz/vue-skeleton"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   },
   "keywords": [
     "vue",

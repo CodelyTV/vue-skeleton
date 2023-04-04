@@ -9,7 +9,7 @@ test('should export Skeleton and friends', () => {
   /* eslint-disable unused-imports/no-unused-vars */
   // @ts-expect-error no-unused-var
   const skeletonProps = { count: 3, borderRadius: '1rem' } as SkeletonProps
-  // @ts-expect-error no-unused-varaa
+  // @ts-expect-error no-unused-var
   const skeletonThemeProps: SkeletonThemeProps = {
     baseColor: '#3a3a3a',
     highlightColor: 'white',

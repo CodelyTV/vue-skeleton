@@ -1,14 +1,14 @@
 {
-  "name": "@codelytv/vue-skeleton",
+  "name": "@codelytv/vue-loading-skeleton",
   "type": "module",
   "version": "0.1.0",
   "description": "A Vue 3 component to create loading skeletons quickly",
   "author": "Antonio Giroz <antonioluisgil@gmail.com> (https://antoniogiroz.com)",
   "license": "MIT",
-  "homepage": "https://github.com/CodelyTV/vue-skeleton",
+  "homepage": "https://github.com/CodelyTV/vue-loading-skeleton",
   "repository": {
     "type": "git",
-    "url": "https://github.com/CodelyTV/vue-skeleton"
+    "url": "https://github.com/CodelyTV/vue-loading-skeleton"
   },
   "publishConfig": {
     "access": "public",

@@ -133,7 +133,7 @@ describe('Skeleton.vue', () => {
 
     const skeleton = getSkeleton();
 
-    expect(skeleton).toHaveClass('vue-skeleton');
+    expect(skeleton).toHaveClass('vue-loading-skeleton');
     expect(skeleton).toHaveClass('test-class');
   });
 

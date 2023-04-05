@@ -9,13 +9,13 @@ const { elements, className } = useSkeleton(props);
 
 <template>
   <template v-for="(element, index) in elements" :key="index">
-    <span class="vue-skeleton" :class="className" :style="element.style"> &zwnj; </span>
+    <span class="vue-loading-skeleton" :class="className" :style="element.style"> &zwnj; </span>
     <br v-if="!props.inline" />
   </template>
 </template>
 
 <style scoped>
-.vue-skeleton {
+.vue-loading-skeleton {
   --base-color: #ebebeb;
   --highlight-color: #f5f5f5;
   --animation-duration: 1.5s;
@@ -34,7 +34,7 @@ const { elements, className } = useSkeleton(props);
   z-index: 1; /* Necessary for overflow: hidden to work correctly in Safari */
 }
 
-.vue-skeleton:after {
+.vue-loading-skeleton:after {
   content: ' ';
   display: var(--pseudo-element-display);
   position: absolute;

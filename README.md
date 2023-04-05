@@ -7,8 +7,8 @@
         This is a Vue port for <a href="https://github.com/dvtng/react-loading-skeleton" target="_blank">react-loading-skeleton</a>
     </p>
     <p align="center">
-        <a href="https://github.com/antoniogiroz/vue-skeleton/actions/workflows/ci.yml">
-            <img alt="CI" src="https://github.com/antoniogiroz/vue-skeleton/actions/workflows/ci.yml/badge.svg" />
+        <a href="https://github.com/codelytv/vue-skeleton/actions/workflows/ci.yml">
+            <img alt="CI" src="https://github.com/codelytv/vue-skeleton/actions/workflows/ci.yml/badge.svg" />
         </a>
     </p>
 </div>
@@ -17,14 +17,14 @@
 
 ```bash
 # npm
-npm install @antoniogiroz/vue-skeleton
+npm install @codelytv/vue-skeleton
 ```
 
 ## Usage
 
 ```vue
 <script setup lang="ts">
-import { Skeleton } from '@antoniogiroz/vue-skeleton'
+import { Skeleton } from '@codelytv/vue-skeleton'
 </script>
 
 <template>
@@ -43,7 +43,7 @@ For example:
 
 ```vue
 <script setup lang="ts">
-import { Skeleton } from '@antoniogiroz/vue-skeleton'
+import { Skeleton } from '@codelytv/vue-skeleton'
 
 const props = defineProps<{
   title?: string;
@@ -86,7 +86,7 @@ Customize individual skeletons with props, or render a `SkeletonTheme` to style 
 
 ```vue
 <script setup lang="ts">
-import { Skeleton, SkeletonTheme } from '@antoniogiroz/vue-skeleton'
+import { Skeleton, SkeletonTheme } from '@codelytv/vue-skeleton'
 </script>
 
 <template>

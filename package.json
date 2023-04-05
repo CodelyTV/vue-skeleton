@@ -36,6 +36,7 @@
     "dist"
   ],
   "scripts": {
+    "prepublishOnly": "pnpm build",
     "build": "run-p type-check build-only",
     "test:unit": "vitest run",
     "test:unit:dev": "vitest",
